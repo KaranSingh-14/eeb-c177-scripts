@@ -1,7 +1,7 @@
 #!/bin/bash
 # tail -n +2 allows you to look at all the lines, exclusing the header. cut -d specied the delimiter in this case its the ; and the -f species the c=particular columns we want to look at. tr -s replaces the ; with empty spaces. THe sort command in this case sorts it in reverse order by body mass (which is the the 6th column)
-tail -n +2 $1 | cut -d "$3" -f 2-6 | tr -s "$3" " " | sort -r -n -k 6 > $2  
-echo "Output file has been created"
+tail -n +2 ~/Developer/repos/CSB/unix/data/Pacifici2013_data.csv | cut -d ";" -f 2-6 | tr -s ";" " " | sort -r -n -k 6 > BodyM.csv 
+echo "BodyM.csv has been created"
 
 #6
 #change directory to be able to access the eeb-c-177-scripts folder
